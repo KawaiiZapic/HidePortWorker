@@ -1,7 +1,8 @@
 # HidePortWorker
 A worker script for Cloudflare to hide your source server port,support cache and more.  
 # What?
-这个脚本可以帮助你在Cloudflare使用非443/80端口时隐藏你的端口,基于Cloudflare Worker.
+这个脚本可以帮助你在Cloudflare使用非443/80端口时隐藏你的端口,基于Cloudflare Worker.  
+此脚本有`SingleServer`与`MultiServer`版本,其中`MultiServer`版本允许添加多个服务器进行负载均衡.
 # How?
 由于Worker无法自定义Header内的`Host`,只能添加新的Header来传递`Host`.  
 所以需要使用一些手段将新的Header转换成`Host`传递给原服务器.  
