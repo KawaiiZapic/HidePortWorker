@@ -35,5 +35,5 @@ let Svr = {
         "Protocol": "https"
 };
 ```
-把脚本添加到Worker并部署,设置代理将全部流量\(*.example.com/*\)代理到新的Worker,访问服务器.  
+把脚本添加到Worker并部署,设置代理将全部流量\(\*.example.com/*\)代理到新的Worker,访问服务器.  
 Done.
