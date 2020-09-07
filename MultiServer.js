@@ -32,6 +32,19 @@ addEventListener(
     Url.protocol = Svr.Protocol + ":";
     let Req = new Request(Url,e.request);
     Req.headers.set('X-Real-Host', e.request.headers.get('Host'));
-    e.respondWith(fetch(Req));
+    let Res = fetch(Req).then((d)=>{
+      if(d.status < 500){
+        return d;
+      } else {
+        return new Response(d.status + " " + d.statusText, {
+          headers: {
+             "content-type": "text/html;charset=UTF-8",
+          },
+          status: d.status,
+          statusText: d.statusText
+        });
+      }
+    });
+    e.respondWith(Res);
   }
 )
