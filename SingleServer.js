@@ -25,6 +25,6 @@ addEventListener(
         });
       }
     });
-    e.respondWith(R);
+    e.respondWith(Res);
   }
 )
