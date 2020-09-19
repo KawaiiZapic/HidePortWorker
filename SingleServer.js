@@ -7,7 +7,7 @@ addEventListener(
   "fetch",
   (e) => {
     let Url = new URL(e.request.url);
-    Url.host = Svr.Host;
+    Url.host = Url.host.replaceAll(".","-") + "." + Svr.Host;
     Url.port = Svr.Port;
     Url.protocol = Svr.Protocol + ":";
     let Req = new Request(Url,e.request);
