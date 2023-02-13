@@ -1,3 +1,6 @@
+# 不再推荐使用
+Cloudflare 官方提供了源规则(Origin Rules), 可以直接设置源主机的目标端口, 不限次数.
+
 # HidePortWorker
 A worker script for Cloudflare to hide your source server port,support cache and more.  
 # What?
